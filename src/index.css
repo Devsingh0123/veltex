@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-blue: #0072BC;
+  --color-brand-green: #39B54A;
+  --color-primary: var(--color-brand-blue);
+  --color-secondary: var(--color-brand-green);
+  --color-brand-dark: #0a0e1a;
+  --color-brand-light: #f0f9ff;
+  --font-family-body: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  --font-family-heading: 'Plus Jakarta Sans', 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-family-body);
+  background-color: #ffffff;
+  color: #111827;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: var(--color-brand-blue); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #005a96; }
+
+.section-padding {
+  @apply py-20 lg:py-28;
+}
+
+/* ─── Video Slider Column Animations ─── */
+@keyframes slideUp {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+@keyframes slideDown {
+  0% { transform: translateY(-50%); }
+  100% { transform: translateY(0); }
+}
+.slider-col-up {
+  animation: slideUp linear infinite;
+  will-change: transform;
+}
+.slider-col-down {
+  animation: slideDown linear infinite;
+  will-change: transform;
+}
+
+/* ─── Brand Logo Ticker ─── */
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.33%); }
+}
+.brand-ticker {
+  animation: ticker 20s linear infinite;
+}
