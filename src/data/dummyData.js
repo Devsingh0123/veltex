@@ -8,7 +8,7 @@ export const servicesData = [
     desc: 'Influence your potential customers on YouTube through top Youtubers',
     items: ['Unboxing Videos', 'Product Videos', 'Long & Short Format', 'Vlogs', 'Community Posts', 'Memes'],
     color: '#e0f2fe',
-    iconColor: 'text-brand-blue'
+    iconColor: 'text--brand-blue'
   },
   {
     icon: 'FiInstagram',
